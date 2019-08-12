@@ -1,0 +1,2 @@
+# Master-thesis-project
+This repository contains the code for my master thesis project. I used the the Python method OceanParcels to relate surface to subsurface microplatic pathways in the North Atlantic. Then I investigated the potential to use surface flow fields in order to estimate sub-surface flow fields. This approach gains to analyse the potential of using two-dimensional SKIM (proposed ESA satellite mission) measurements to estimate three-dimensional microplastic distribution in the ocean.
