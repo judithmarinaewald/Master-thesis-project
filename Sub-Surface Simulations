@@ -3,8 +3,8 @@ Judith Ewald
 ######################################################################
 Code for the computation of particle trajectories
 Advection of particles with nemo 1/12 degree. 
-Simulation with wind-stress based mixing of Poulain et al. 2019
-Particles initially as regular grid in North Atlantic
+Simulation with wind-stress based mixing of Kukulka et al 2012 and Poulain et al 2019
+Particles initially distributed as regular grid in North Atlantic
 """
 
 import xarray as xr
@@ -26,7 +26,7 @@ outname = 'Kukulka'
 minlat = 0
 maxlat = 75
 minlon = -100
-maxlon = 50
+maxlon = 30
 
 init_grid_res = 0.2
 griddir = '/scratch/judithe/judithe/Natl02grid/' # '/scratch/judithe/Natl1grid/', '/scratch/judithe/Natl02grid/'
@@ -36,11 +36,7 @@ simdays = 7
 outputdir = '/scratch/judithe/'
 outfile = outputdir + outname + '_res' + str(init_grid_res) + '_simdays' + str(simdays) + '_pos' + str(pos) + '_dt3h' + 'alldepths' +'_winter'
 
-
-#Define rising velocity for vertical mixing (Poulain et al. 2019)
-#pp = 1.005 #particle density; ellipsoidal shape: 1.005; spherical shape: 0.9
-#V = 0.0025 #particle volume; LMP = 0.1 - 0.5, SMP = 0.0025 - 0.1
-wrise = 0.005 # ellipsoidal and smallest SMP value
+wrise = 0.005 #Kukulka: wrise = 0.005, Poulain wrise = 0.00049
 
 
 """Kernels and functions"""
