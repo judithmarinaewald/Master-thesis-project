@@ -79,7 +79,7 @@ lats = nc.variables["lat"][:]#.squeeze()
 
 
 '''Plot Polar Coordiantes map - distance (km)'''
-i = 24
+i = 24 # 24*timesteps (each timestep is 3 hours) results in 3 days
 
 #for i == 24: #in range(1,57):
 if i==24: 
